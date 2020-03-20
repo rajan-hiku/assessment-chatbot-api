@@ -87,20 +87,33 @@ const defaultPostalCodeTxt = (centers = []) => {
     // }
     const { CenterName, StreetAddress, City, Province, PostalCode } = center
     resultTxt = resultTxt + ` ${CenterName} ${StreetAddress} ${City}, ${Province} ${PostalCode}`
-    resultTxt = resultTxt + ' /Line Break '
+    //resultTxt = resultTxt + ' /Line Break '
   })
-  resultTxt = resultTxt + ' If your symptoms significanly worsen call 911 or go to the nearest Emergency Department'
+  resultTxt = resultTxt + '. If your symptoms significanly worsen call 911 or go to the nearest Emergency Department .'
   return resultTxt
 }
 
-
 const nearestCenter = async (context, event, callback) => {
-  const twiml = new Twilio.twiml.VoiceResponse()
-  const { postalCode } = context
+  let responseObject = {};
+  let memory = JSON.parse(event.Memory);
+  const postalCode = memory.twilio.collected_data.ask_questions.answers.PostalCode.answer
+  // const postalCode = "P3E"
   const top3 = await getTop3Centers(postalCode)
   const result = defaultPostalCodeTxt(top3)
-  twiml.say(result);
-  callback(null, twiml)
+  responseObject = {
+    "actions": [
+      {
+        "say": result
+      },
+      {
+        "redirect": "task://information_router"
+      },
+      {
+        "listen": false
+      }
+    ]
+  };
+  callback(null, responseObject);
 };
 
 exports.handler = nearestCenter
