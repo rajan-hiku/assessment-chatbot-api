@@ -60,7 +60,7 @@ const getTop3Centers = async postalCode => {
 
 const getLatFromPostalCode = async postalCode => {
   try {
-    const { results } = await opencage.geocode({ q: postalCode })
+    const { results } = await opencage.geocode({ q: `${postalCode},Canada` })
     // geometry defaults to Toronto
     const { geometry } = (Array.isArray(results) &&
       results.length > 0 &&
