@@ -1,0 +1,37 @@
+{
+    "_table": {
+        "_base": {
+            "_airtable": {
+                "requestTimeout": 300000
+            },
+            "_id": "appZv8bkFustjCUXN"
+        },
+        "id": null,
+        "name": "AssessmentCenters"
+    },
+    "id": "recspsA9yRI1k3e5F",
+    "_rawJson": {
+        "id": "recspsA9yRI1k3e5F",
+        "fields": {
+            "CenterName": "Health Sciences North Research Institute",
+            "StreetAddress": "56 Walford Road",
+            "City": "Sudbury",
+            "Province": "ON",
+            "PostalCode": "P3E 2H3",
+            "PhoneNumber": "705-523-7100",
+            "PID": "ChIJXSBsyTFVLk0RXQNa7cR-1y0",
+            "Proximity": "P3EK1SN6H"
+        },
+        "createdTime": "2020-03-19T23:42:39.000Z"
+    },
+    "fields": {
+        "CenterName": "Health Sciences North Research Institute",
+        "StreetAddress": "56 Walford Road",
+        "City": "Sudbury",
+        "Province": "ON",
+        "PostalCode": "P3E 2H3",
+        "PhoneNumber": "705-523-7100",
+        "PID": "ChIJXSBsyTFVLk0RXQNa7cR-1y0",
+        "Proximity": "P3EK1SN6H"
+    }
+}
