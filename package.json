@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "twilio-run",
+    "deploy": "twilio-run deploy",
     "start:dev": "nodemon app.local.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +20,10 @@
     "opencage-api-client": "^0.7.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "twilio-run": "^2.0.0"
+  },
+  "engines": {
+    "node": "10.17.0"
   }
 }
