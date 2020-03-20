@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.local.js",
+    "start": "node app.js",
     "start:dev": "nodemon app.local.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "airtable": "^0.8.1",
-    "aws-serverless-express": "^3.3.6",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

@@ -2,7 +2,6 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const Airtable = require('airtable')
-const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 const cors = require('cors')
 var base = new Airtable({ apiKey: process.env.AIRTABLE }).base(
   'appZv8bkFustjCUXN'
@@ -18,7 +17,6 @@ app.use(express.json()) // for parsing application/json
 router.use(cors())
 router.use(bodyParser.json())
 router.use(bodyParser.urlencoded({ extended: true }))
-router.use(awsServerlessExpressMiddleware.eventContext())
 
 router.get('/updateAirtable', async (req, res) => {
   try {
