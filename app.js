@@ -7,10 +7,9 @@ var base = new Airtable({ apiKey: process.env.AIRTABLE }).base(
   'appZv8bkFustjCUXN'
 )
 const bodyParser = require('body-parser')
-const { defaultPostalCodeTxt } = require('./constant')
-const getTop3Centers = require('./functions/lib')
 const router = express.Router()
-
+const airtableBase = 'CenterDetails'
+const { getLatFromPostalCode } = require('./functions/lib')
 app.use(express.json()) // for parsing application/json
 router.use(cors())
 router.use(bodyParser.json())
@@ -70,14 +69,6 @@ router.get('/updateAirtable', async (req, res) => {
     res.sendStatus(404).send(err)
   }
 })
-
-router.post('/nearestCenter', async (req, res) => {
-  const { postalCode } = req.body
-  const top3 = await getTop3Centers(postalCode)
-  const result = defaultPostalCodeTxt(top3)
-  res.send(result)
-})
-
 
 app.use('/', router)
 
