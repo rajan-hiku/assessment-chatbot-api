@@ -9,7 +9,7 @@ var base = new Airtable({ apiKey: process.env.AIRTABLE }).base(
 const bodyParser = require('body-parser')
 const router = express.Router()
 const airtableBase = 'CenterDetails'
-const { getLatFromPostalCode } = require('./functions/lib')
+const { getLatFromPostalCode } = require('./lib')
 app.use(express.json()) // for parsing application/json
 router.use(cors())
 router.use(bodyParser.json())
