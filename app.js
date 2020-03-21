@@ -154,5 +154,4 @@ router.post("/nearestCenter", async (req, res) => {
 
 app.use("/", router);
 
-module.exports = app;
-// app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
