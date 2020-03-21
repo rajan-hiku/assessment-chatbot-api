@@ -35,17 +35,15 @@ function haversineDistance (a, b) {
 
 var haversineDistance_1 = haversineDistance;
 
-const airtableBase = "CenterDetails";
-
 var base = new airtable({ apiKey: process.env.AIRTABLE }).base(
   "appZv8bkFustjCUXN"
 );
 
 
-const getTop3Centers = async postalCode => {
+const getTop3Centers = async (tableName = "CenterDetails", postalCode) => {
   const { lat: _lat, lng: _lng } = await getLatFromPostalCode(postalCode);
   const userLatLng = { lat: _lat, lng: _lng };
-  const record = await base(airtableBase)
+  const record = await base(tableName)
     .select()
     .all();
   const distanceHash = [];
@@ -77,8 +75,8 @@ const getLatFromPostalCode = async postalCode => {
   }
 };
 
-const defaultAssementCodeTxt = (centers = []) => {
-  let resultTxt = "The 3 closest assessment center to you are: \n";
+const defaultAssementCodeTxt = (startTxt, centers = []) => {
+  let resultTxt = `${startTxt} \n`;
   centers.forEach(center => {
     // {
     //     "id": "recoETgz2HJeTjlWI",
@@ -110,15 +108,18 @@ var lib = {
 };
 
 const { getTop3Centers: getTop3Centers$1, defaultAssementCodeTxt: defaultAssementCodeTxt$1 } = lib;
-
+const table = "CenterDetails";
 const nearestCenter = async (context, event, callback) => {
   let responseObject = {};
   let memory = JSON.parse(event.Memory);
   const postalCode =
     memory.twilio.collected_data.ask_questions.answers.PostalCode.answer;
 
-  const top3 = await getTop3Centers$1(postalCode);
-  const result = defaultAssementCodeTxt$1(top3);
+  const top3 = await getTop3Centers$1(table, postalCode);
+  const result = defaultAssementCodeTxt$1(
+    "The 3 closest assessment center to you are:",
+    top3
+  );
   responseObject = {
     actions: [
       {

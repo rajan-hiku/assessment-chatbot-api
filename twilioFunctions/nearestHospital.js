@@ -8,9 +8,10 @@ const nearestCenter = async (context, event, callback) => {
 
   const top3 = await getTop3Centers(table, postalCode);
   const result = defaultAssementCodeTxt(
-    "The 3 closest assessment center to you are:",
+    "The 3 closest hospitals center to you are:",
     top3
   );
+
   responseObject = {
     actions: [
       {
