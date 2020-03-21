@@ -44,10 +44,7 @@ var base = new airtable({ apiKey: process.env.AIRTABLE }).base(
 
 const getTop3Centers = async postalCode => {
   const { lat: _lat, lng: _lng } = await getLatFromPostalCode(postalCode);
-
   const userLatLng = { lat: _lat, lng: _lng };
-  console.log(userLatLng);
-
   const record = await base(airtableBase)
     .select()
     .all();
@@ -55,7 +52,6 @@ const getTop3Centers = async postalCode => {
   record.forEach(({ id, fields }) => {
     const { lat, lng, ...rest } = fields;
     const centerLatLng = { lat, lon: lng };
-
     distanceHash.push({
       id,
       distance: haversineDistance_1(userLatLng, centerLatLng),
@@ -63,7 +59,6 @@ const getTop3Centers = async postalCode => {
     });
   });
   distanceHash.sort((a, b) => a.distance - b.distance);
-
   const top3 = distanceHash.slice(0, 3);
   return top3;
 };
@@ -82,8 +77,8 @@ const getLatFromPostalCode = async postalCode => {
   }
 };
 
-const defaultPostalCodeTxt = (centers = []) => {
-  let resultTxt = "The 3 closest hospitals to you are: \n";
+const defaultAssementCodeTxt = (centers = []) => {
+  let resultTxt = "The 3 closest assessment center to you are: \n";
   centers.forEach(center => {
     // {
     //     "id": "recoETgz2HJeTjlWI",
@@ -111,10 +106,10 @@ const defaultPostalCodeTxt = (centers = []) => {
 var lib = {
   getLatFromPostalCode,
   getTop3Centers,
-  defaultPostalCodeTxt
+  defaultAssementCodeTxt
 };
 
-const { getTop3Centers: getTop3Centers$1, defaultPostalCodeTxt: defaultPostalCodeTxt$1 } = lib;
+const { getTop3Centers: getTop3Centers$1, defaultAssementCodeTxt: defaultAssementCodeTxt$1 } = lib;
 
 const nearestCenter = async (context, event, callback) => {
   let responseObject = {};
@@ -123,7 +118,7 @@ const nearestCenter = async (context, event, callback) => {
     memory.twilio.collected_data.ask_questions.answers.PostalCode.answer;
 
   const top3 = await getTop3Centers$1(postalCode);
-  const result = defaultPostalCodeTxt$1(top3);
+  const result = defaultAssementCodeTxt$1(top3);
   responseObject = {
     actions: [
       {

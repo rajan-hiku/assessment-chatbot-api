@@ -148,9 +148,11 @@ router.post("/nearestCenter", async (req, res) => {
     Memory: mem
   };
   const callback = (err, respond) => {
+    if (err) res.send(err);
     res.send(respond);
   };
-  require("./twilioFunctions/nearestCenter")(null, event, callback);
+  const { handler } = require("./twilioFunctions/nearestCenter");
+  handler(null, event, callback);
 });
 
 app.use("/", router);

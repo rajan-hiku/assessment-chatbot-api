@@ -1,4 +1,4 @@
-const { getTop3Centers, defaultPostalCodeTxt } = require("../lib");
+const { getTop3Centers, defaultAssementCodeTxt } = require("../lib");
 
 const nearestCenter = async (context, event, callback) => {
   let responseObject = {};
@@ -7,7 +7,7 @@ const nearestCenter = async (context, event, callback) => {
     memory.twilio.collected_data.ask_questions.answers.PostalCode.answer;
 
   const top3 = await getTop3Centers(postalCode);
-  const result = defaultPostalCodeTxt(top3);
+  const result = defaultAssementCodeTxt(top3);
   responseObject = {
     actions: [
       {
