@@ -119,7 +119,6 @@ const { getTop3Centers: getTop3Centers$1, defaultPostalCodeTxt: defaultPostalCod
 const nearestCenter = async (context, event, callback) => {
   let responseObject = {};
   let memory = JSON.parse(event.Memory);
-  console.log(memory);
   const postalCode =
     memory.twilio.collected_data.ask_questions.answers.PostalCode.answer;
 

@@ -1,9 +1,8 @@
-const { getTop3Centers, defaultPostalCodeTxt } = require("./lib");
+const { getTop3Centers, defaultPostalCodeTxt } = require("../lib");
 
 const nearestCenter = async (context, event, callback) => {
   let responseObject = {};
   let memory = JSON.parse(event.Memory);
-  console.log(memory);
   const postalCode =
     memory.twilio.collected_data.ask_questions.answers.PostalCode.answer;
 

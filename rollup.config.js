@@ -1,7 +1,7 @@
 import resolve from "@rollup/plugin-commonjs";
 
 export default {
-  input: "nearestCenter.js",
+  input: "twilioFunctions/nearestCenter.js",
   output: {
     file: "functions/nearestCenter.js",
     format: "cjs"
