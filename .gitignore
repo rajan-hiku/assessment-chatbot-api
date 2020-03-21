@@ -1,3 +1,5 @@
+functions/
+
 # Logs
 logs
 *.log
@@ -219,4 +221,4 @@ dist
 .yarn/build-state.yml
 .pnp.*
 
-functions/
+
