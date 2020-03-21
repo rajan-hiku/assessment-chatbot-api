@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const Airtable = require("airtable");
 const cors = require("cors");
+const port = 3000;
 
 var base = new Airtable({ apiKey: process.env.AIRTABLE }).base(
   "appZv8bkFustjCUXN"
