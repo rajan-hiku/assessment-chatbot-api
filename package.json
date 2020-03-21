@@ -6,6 +6,7 @@
     "start": "nodemon app.js",
     "build": "rollup -c",
     "deploy": "npm run build && twilio-run deploy",
+    "lint": "eslint **.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
