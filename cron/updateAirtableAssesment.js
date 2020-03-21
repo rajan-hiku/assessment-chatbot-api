@@ -5,10 +5,12 @@ const updateAirtableAssesment = async (req, res, next) => {
   try {
     const record = await airTableBase(centerTable)
       .select({
-        fields: ['PostalCode']
+        fields: ['PostalCode'],
+        filterByFormula: '{lat}= BLANK()'
       })
       .all()
 
+    if (record.length <= 0) res.send('All rows updated')
     const airTableUpdatedRecords = []
 
     await Promise.all(
