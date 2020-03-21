@@ -16,17 +16,9 @@ use post body like this
 const postalCode = req.body.postalCode;
 // Pushing into Twilio format
 
-Convert to twilio format
-const mem = JSON.stringify({
-twilio: {
-collected_data: {
-ask_questions: {
-answers: {
-PostalCode: {
-answer: postalCode
-}
-}
-}
-}
-}
-});
+Convert to twilio format - see nearestCenter Example
+
+### Deploy
+
+Rollup will build project in twilio format ( module.exports,etc and common.js)
+then twilio deploy can deploy the app
