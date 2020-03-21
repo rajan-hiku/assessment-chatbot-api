@@ -16,8 +16,16 @@ router.use(bodyParser.urlencoded({ extended: true }))
 const { updateAirtableAssesment } = require('./cron/updateAirtableAssesment')
 const { updateAirtableHospital } = require('./cron/updateAirtableHospital')
 
-router.get('/updateAirtableAssesment', updateAirtableAssesment)
-router.get('/updateAirtableHospital', updateAirtableHospital)
+function cronCheck (req, res, next) {
+  const { headers } = req
+  if (headers.password === process.env.CRON_PASS) {
+    next()
+  } else {
+    res.sendStatus(401)
+  }
+}
+router.get('/updateAirtableAssesment', cronCheck, updateAirtableAssesment)
+router.get('/updateAirtableHospital', cronCheck, updateAirtableHospital)
 
 router.post('/nearestCenter', async (req, res) => {
   const postalCode = req.body.postalCode
