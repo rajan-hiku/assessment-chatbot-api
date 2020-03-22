@@ -35,7 +35,7 @@ router.post('/nearestCenter', async (req, res) => {
       collected_data: {
         ask_questions: {
           answers: {
-            HPostalCode: {
+            PostalCode: {
               answer: postalCode
             }
           }

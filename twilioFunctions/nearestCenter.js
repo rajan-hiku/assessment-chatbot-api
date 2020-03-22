@@ -5,7 +5,7 @@ const nearestCenter = async (context, event, callback) => {
   let responseObject = {}
   const memory = JSON.parse(event.Memory)
   const postalCode =
-    memory.twilio.collected_data.ask_questions.answers.HPostalCode.answer
+    memory.twilio.collected_data.ask_questions.answers.PostalCode.answer
 
   const top3 = await getTop3Centers(centerTable, postalCode)
   const result = defaultAssementCodeTxt(
