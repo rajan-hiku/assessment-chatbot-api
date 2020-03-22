@@ -7,7 +7,8 @@
     "build": "rollup -c",
     "deploy": "npm run build && twilio-run deploy",
     "lint": "eslint **.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update:ta": "ta update --schema COVID19BOT1.json"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +21,8 @@
     "opencage-api-client": "^0.7.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "11.0.2",
+    "@twilio/autopilot-cli": "^0.0.27",
+    "@rollup/plugin-commonjs": "^11.0.2",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.1",

@@ -61,3 +61,6 @@ Then run `npm run start`
 6. Now, just do npm run deploy, this will create a new function in /functions folder and upload it to twilio
 7. Twilio takes packages, from dependencies under package.json
 8
+
+### Update CovidBot 
+1. use npm run `update:ta`
