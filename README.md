@@ -63,6 +63,11 @@ Then run `npm run start`
 8
 
 ### Update CovidBot 
-1. use npm run `update:ta`
+1. Make changes to COVID19BOT1.json -> this is the dev bot
+2. use `npm run update:ta` to push those changes to twilio
 https://github.com/twilio/autopilot-templates
+
+### twilio SID and Auth Token
+if twilio asks you for id and password, go to https://www.twilio.com/console/project/settings 
+Account SID and Auth Token are here 
 
