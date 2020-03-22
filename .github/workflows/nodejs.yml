@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: python3 ./create-envfile.py
+      - run: python3 ./.github/workflows/scripts/createEnv.py
         env:
           CI: true
           AIRTABLE: ${{ secrets.AIRTABLE }}
