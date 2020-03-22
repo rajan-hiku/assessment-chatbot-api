@@ -64,3 +64,5 @@ Then run `npm run start`
 
 ### Update CovidBot 
 1. use npm run `update:ta`
+https://github.com/twilio/autopilot-templates
+
