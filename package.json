@@ -5,10 +5,9 @@
   "scripts": {
     "start": "nodemon app.js",
     "build": "rollup -c",
-    "deploy": "npm run build && twilio-run deploy",
+    "deploy": "npm run build && twilio-run deploy && ta update --schema COVID19BOT1.json",
     "lint": "eslint **.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "update:ta": "ta update --schema COVID19BOT1.json"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
