@@ -25,7 +25,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run build
-      - run: ./.github/scripts/decrypt_secret.sh
+      - run: ./.github/scripts/deploy.sh
         env:
           CI: true
           AIRTABLE: ${{ secrets.AIRTABLE }}
