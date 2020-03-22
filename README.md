@@ -43,6 +43,8 @@ exports.handler = nearestCenter
 
 I am using .post to send a postalCode as a JSON 
 ```
+Then run `npm run start`
+
 5. Add a new rollup.config.js object
 ```
 {
@@ -57,4 +59,5 @@ I am using .post to send a postalCode as a JSON
 `Remember to add this in the existing array`
 
 6. Now, just do npm run deploy, this will create a new function in /functions folder and upload it to twilio
-
+7. Twilio takes packages, from dependencies under package.json
+8
