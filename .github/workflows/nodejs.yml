@@ -28,3 +28,7 @@ jobs:
       - run: npm run deploy
         env:
           CI: true
+          AIRTABLE: ${{ secrets.AIRTABLE }}
+          OCD_API_KEY: ${{ secrets.OCD_API_KEY }}
+          ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
