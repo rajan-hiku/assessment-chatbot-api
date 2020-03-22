@@ -11,6 +11,7 @@ const updateAirtableAssesment = async (req, res, next) => {
       .all()
 
     if (record.length <= 0) res.send('All rows updated')
+    console.log('records left', record.length)
     const airTableUpdatedRecords = []
 
     await Promise.all(
