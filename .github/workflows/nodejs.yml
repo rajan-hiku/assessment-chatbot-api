@@ -25,7 +25,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run build
-      - run: ./.github/scripts/deploy.sh
+      - run: python3 /create-envfile.py
+      - run: npm run deploy
         env:
           CI: true
           AIRTABLE: ${{ secrets.AIRTABLE }}
