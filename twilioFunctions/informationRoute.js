@@ -2,6 +2,7 @@ const { airTableBase, messagesTable } = require('../constants');
 
 const informationRouter = function(context, event, callback) {
     let message = {};
+    
 
     let responseObject = {
         "actions": [
