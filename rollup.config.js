@@ -16,5 +16,13 @@ export default [
       format: 'cjs'
     },
     plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/informationRoute.js',
+    output: {
+      file: 'functions/informationRoute.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
   }
 ]
