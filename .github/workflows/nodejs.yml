@@ -18,14 +18,12 @@ jobs:
         node-version: [10.17.0]
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}a
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run build
-      - name: Setup Python
-      - uses: actions/setup-python@v1.2.0
       - run: python3 ./.github/workflows/scripts/createEnv.py
       - run: sh ./.github/workflows/scripts/deploy.sh
         env:
