@@ -83,6 +83,17 @@ router.post('/nearestHospital', async (req, res) => {
   handler(null, event, callback)
 })
 
+router.get('/infoRoute', async (req, res) => {
+  const event = {
+  }
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond)
+  }
+  const { handler } = require('./twilioFunctions/informationRoute')
+  handler(null, event, callback)
+})
+
 app.use('/', router)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
