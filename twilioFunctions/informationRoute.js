@@ -1,7 +1,8 @@
 const { airTableBase, messagesTable } = require('../constants')
 
 const informationRouter = function (context, event, callback) {
-  const message = {}
+  const message = 'For COVID-19 News Update Text 1. \r For COVID-19 Triage Text 2. \r For COVID-19 Self-isolation Text 3. \r For COVID-19 Prevention Tips Text 4. \r For Exit Text 5.'
+
   // Current PRod
   // [
   //   {
