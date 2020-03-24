@@ -24,5 +24,21 @@ export default [
       format: 'cjs'
     },
     plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/triage1.js',
+    output: {
+      file: 'functions/triage1.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/Questions1.js',
+    output: {
+      file: 'functions/Questions1.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
   }
 ]

@@ -94,6 +94,43 @@ router.get('/infoRoute', async (req, res) => {
   handler(null, event, callback)
 })
 
+router.post('/triage1', async (req, res) => {
+  const breathing = req.body.breathing
+  const mem = JSON.stringify({
+    twilio: {
+      collected_data: {
+        ask_questions: {
+          answers: {
+            Breathing: {
+              answer: breathing
+            }
+          }
+        }
+      }
+    }
+  })
+  const event = {
+    Memory: mem
+  }
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond)
+  }
+  const { handler } = require('./twilioFunctions/triage1')
+  handler(null, event, callback)
+})
+
+router.get('/Questions1', async (req, res) => {
+  const event = {
+  }
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond)
+  }
+  const { handler } = require('./twilioFunctions/Questions1')
+  handler(null, event, callback)
+})
+
 app.use('/', router)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
