@@ -17,11 +17,13 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "opencage-api-client": "^0.7.1"
+    "mysql2": "^2.1.0",
+    "opencage-api-client": "^0.7.1",
+    "sequelize": "^5.21.5"
   },
   "devDependencies": {
-    "@twilio/autopilot-cli": "^0.0.27",
     "@rollup/plugin-commonjs": "^11.0.2",
+    "@twilio/autopilot-cli": "^0.0.27",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.1",
@@ -30,6 +32,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "nodemon": "^2.0.2",
     "rollup": "^2.1.0",
+    "sequelize-cli": "^5.5.1",
     "twilio-run": "^2.0.0"
   },
   "engines": {
