@@ -71,3 +71,10 @@ https://github.com/twilio/autopilot-templates
 if twilio asks you for id and password, go to https://www.twilio.com/console/project/settings 
 Account SID and Auth Token are here 
 
+### .env
+make sure ur .env looks like this
+AIRTABLE=AIRTABLE_KEY
+OCD_API_KEY=Opencage key
+CRON_PASS=any random letter, this will update airtable with lat,lng
+ACCOUNT_SID=twilio SID 
+AUTH_TOKEN=twilio Auth Token
