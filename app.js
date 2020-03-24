@@ -94,6 +94,91 @@ router.get('/infoRoute', async (req, res) => {
   handler(null, event, callback)
 })
 
+
+router.post('/triage2', async (req, res) => {
+  const breathing = req.body.breathing;
+
+  const mem = JSON.stringify({
+    twilio: {
+      collected_data: {
+        ask_questions: {
+          answers: {
+            Breathing: {
+              answer: breathing
+            }
+          }
+        }
+      }
+    }
+  });
+
+  const event = { Memory: mem };
+  
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond);
+  }
+
+  const { handler } = require('./twilioFunctions/triage2');
+  handler(null, event, callback);
+})
+
+router.post('/triage3', async (req, res) => {
+  const breathing = req.body.breathing;
+
+  const mem = JSON.stringify({
+    twilio: {
+      collected_data: {
+        ask_questions: {
+          answers: {
+            Breathing: {
+              answer: breathing
+            }
+          }
+        }
+      }
+    }
+  });
+
+  const event = { Memory: mem };
+  
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond);
+  }
+
+  const { handler } = require('./twilioFunctions/triage3');
+  handler(null, event, callback);
+})
+
+router.post('/triage4', async (req, res) => {
+  const breathing = req.body.breathing;
+
+  const mem = JSON.stringify({
+    twilio: {
+      collected_data: {
+        ask_questions: {
+          answers: {
+            Breathing: {
+              answer: breathing
+            }
+          }
+        }
+      }
+    }
+  });
+
+  const event = { Memory: mem };
+  
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond);
+  }
+
+  const { handler } = require('./twilioFunctions/triage4');
+  handler(null, event, callback);
+})
+
 app.use('/', router)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
