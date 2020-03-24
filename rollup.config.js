@@ -40,5 +40,29 @@ export default [
       format: 'cjs'
     },
     plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/safetytips.js',
+    output: {
+      file: 'functions/safetytips.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/selfisolation.js',
+    output: {
+      file: 'functions/selfisolation.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/newsupdate.js',
+    output: {
+      file: 'functions/newsupdate.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
   }
 ]
