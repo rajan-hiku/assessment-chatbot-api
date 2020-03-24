@@ -64,5 +64,59 @@ export default [
       format: 'cjs'
     },
     plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/triage4.js',
+    output: {
+      file: 'functions/triage4.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/triage3.js',
+    output: {
+      file: 'functions/triage3.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/triage2.js',
+    output: {
+      file: 'functions/triage2.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/Questions2.js',
+    output: {
+      file: 'functions/Questions2.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/Questions3.js',
+    output: {
+      file: 'functions/Questions3.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/Questions4.js',
+    output: {
+      file: 'functions/Questions4.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
   }
+ 
 ]
+
+
+
+
+

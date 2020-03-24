@@ -278,7 +278,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/Triage4"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/triage4"
                     }
                 ]
             },
@@ -290,7 +290,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/Questions4"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/Questions4"
                     }
                 ]
             },
@@ -302,7 +302,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/Triage3"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/triage3"
                     }
                 ]
             },
@@ -314,7 +314,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/Questions3"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/Questions3"
                     }
                 ]
             },
@@ -326,7 +326,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/Triage2"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/triage2"
                     }
                 ]
             },
@@ -338,7 +338,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/Questions2"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/Questions2"
                     }
                 ]
             },
