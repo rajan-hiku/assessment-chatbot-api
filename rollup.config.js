@@ -26,6 +26,46 @@ export default [
     plugins: [resolve()]
   },
   {
+    input: 'twilioFunctions/triage1.js',
+    output: {
+      file: 'functions/triage1.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/Questions1.js',
+    output: {
+      file: 'functions/Questions1.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/safetytips.js',
+    output: {
+      file: 'functions/safetytips.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/selfisolation.js',
+    output: {
+      file: 'functions/selfisolation.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/newsupdate.js',
+    output: {
+      file: 'functions/newsupdate.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
     input: 'twilioFunctions/triage4.js',
     output: {
       file: 'functions/triage4.js',
@@ -73,4 +113,10 @@ export default [
     },
     plugins: [resolve()]
   }
+ 
 ]
+
+
+
+
+

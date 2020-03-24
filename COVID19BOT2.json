@@ -52,18 +52,6 @@
     "fieldTypes": [],
     "tasks": [
         {
-            "uniqueName": "TraigeDev2",
-            "actions": {
-                "actions": [
-                    {
-                        "say": "This is your new Task"
-                    }
-                ]
-            },
-            "fields": [],
-            "samples": []
-        },
-        {
             "uniqueName": "nearestHospital",
             "actions": {
                 "actions": [
@@ -133,7 +121,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/getPostalCode"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/getPostalCode"
                     }
                 ]
             },
@@ -362,7 +350,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/Triage1-Dev"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/triage1"
                     }
                 ]
             },
@@ -374,7 +362,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/Questions1"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/Questions1"
                     }
                 ]
             },
