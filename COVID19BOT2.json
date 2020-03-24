@@ -52,18 +52,6 @@
     "fieldTypes": [],
     "tasks": [
         {
-            "uniqueName": "TraigeDev2",
-            "actions": {
-                "actions": [
-                    {
-                        "say": "This is your new Task"
-                    }
-                ]
-            },
-            "fields": [],
-            "samples": []
-        },
-        {
             "uniqueName": "nearestHospital",
             "actions": {
                 "actions": [
