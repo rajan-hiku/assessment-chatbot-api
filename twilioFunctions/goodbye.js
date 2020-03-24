@@ -1,9 +1,9 @@
 const { airTableBase, messagesTable } = require('../constants')
 
-const fn_selfisolation = function (context, event, callback) {
+const fn_callfallback = function (context, event, callback) {
   let message = ''
   airTableBase(messagesTable)
-    .select({ filterByFormula: 'AND(SEARCH("Self-Isolation", Name),SEARCH("Both",BotType))' })
+    .select({ filterByFormula: 'AND(SEARCH("Goodbye", Name),SEARCH("Both",BotType))' })
     .eachPage(function page (records, fetchNextPage) {
       // This function (`page`) will get called for each page of records.
       console.log(records[0].fields)
@@ -12,12 +12,6 @@ const fn_selfisolation = function (context, event, callback) {
         actions: [
           {
             say: message
-          },
-          {
-              "redirect": "https://assessment-center-api-4281-dev.twil.io/informationRoute"
-          },
-          {
-              "listen": false
           }
         ]
       }
@@ -27,4 +21,4 @@ const fn_selfisolation = function (context, event, callback) {
     })
 }
 
-exports.handler = fn_selfisolation
+exports.handler = fn_callfallback

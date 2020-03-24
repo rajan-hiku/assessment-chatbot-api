@@ -17,7 +17,7 @@ If you are experiencing other symptoms and want assessment, contact your primary
 	            "say": message
 	        },
 	        {
-			"redirect": "task://information_router"
+			"redirect": "https://assessment-center-api-4281-dev.twil.io/informationRoute"
     		},
     		{
     			"listen": false
@@ -28,7 +28,7 @@ If you are experiencing other symptoms and want assessment, contact your primary
 	   	responseObject = {
 	    "actions": [
 	        {
-			"redirect": "task://Questions4"
+			"redirect": "https://assessment-center-api-4281-dev.twil.io/Questions4"
     		},
     		{
     			"listen": false

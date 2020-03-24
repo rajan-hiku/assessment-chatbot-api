@@ -3,7 +3,7 @@ exports.handler = function(context, event, callback) {
 	let message = {};
 	let memory = JSON.parse(event.Memory);
 	
-	let Breathing = memory.twilio.collected_data.ask_questions.answers.Breathing.answer || 'No';
+	let Breathing = memory.twilio.collected_data.ask_questions.answers.question2.answer;
 
 	
 	if ( Breathing == 'Yes' ){
@@ -15,7 +15,7 @@ exports.handler = function(context, event, callback) {
 		            "say": message
 		        },
 		        {
-				"redirect": "task://getHospitalPostalCode"
+				"redirect": "https://assessment-center-api-4281-dev.twil.io/getHospitalPostalCode"
 	    		},
 	    		{
 	    			"listen": false
@@ -26,7 +26,7 @@ exports.handler = function(context, event, callback) {
 	   	responseObject = {
 	    "actions": [
 	        {
-			"redirect": "task://Questions3"
+			"redirect": "https://assessment-center-api-4281-dev.twil.io/Questions3"
     		},
     		{
     			"listen": false

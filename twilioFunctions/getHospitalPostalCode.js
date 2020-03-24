@@ -1,14 +1,14 @@
 const { airTableBase, messagesTable } = require('../constants')
 exports.handler = function (context, event, callback) {
   airTableBase(messagesTable)
-    .select({ filterByFormula: 'AND(SEARCH("getPostalCode", Name),SEARCH("Both",BotType))' }).eachPage(function page (records, fetchNextPage) {
+    .select({ filterByFormula: 'AND(SEARCH("getHospitalPostalCode", Name),SEARCH("Both",BotType))' }).eachPage(function page (records, fetchNextPage) {
       const message = records[0].fields.Message
       const questions = [
         {
           question: {
             say: message
           },
-          name: 'PostalCode'
+          name: 'HPostalCode'
         }
       ]
       const responseObject = {
@@ -18,7 +18,7 @@ exports.handler = function (context, event, callback) {
               name: 'ask_questions',
               questions: questions,
               on_complete: {
-                redirect: 'https://assessment-center-api-4281-dev.twil.io/nearestCent'
+                redirect: 'https://assessment-center-api-4281-dev.twil.io/nearestHosp'
               }
             }
           }]

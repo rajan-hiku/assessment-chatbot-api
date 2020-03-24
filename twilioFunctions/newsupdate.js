@@ -1,6 +1,6 @@
 const { airTableBase, messagesTable } = require('../constants')
 
-const fn_safetytips = function (context, event, callback) {
+const fn_newsupdate = function (context, event, callback) {
   let message = ''
   airTableBase(messagesTable)
     .select({ filterByFormula: 'AND(SEARCH("NewsUpdate", Name),SEARCH("SMS",BotType))' })
@@ -27,4 +27,4 @@ const fn_safetytips = function (context, event, callback) {
     })
 }
 
-exports.handler = fn_safetytips
+exports.handler = fn_newsupdate

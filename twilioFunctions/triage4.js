@@ -15,7 +15,7 @@ If your symptoms worsen, or if you are concerned, go to https://www.canada.ca/co
 	            "say": message
 	        },
 	        {
-			"redirect": "task://information_router"
+			"redirect": "https://assessment-center-api-4281-dev.twil.io/informationRoute"
     		},
     		{
     			"listen": false
@@ -33,7 +33,7 @@ Because you have (or had) symptoms, you should self-isolate until your test resu
 	            "say": message
 	        },
 	        {
-			"redirect": "task://getPostalCode"
+			"redirect": "https://assessment-center-api-4281-dev.twil.io/getPostalCode"
     		},
     		{
     			"listen": false

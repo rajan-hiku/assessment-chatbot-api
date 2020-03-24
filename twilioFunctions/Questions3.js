@@ -17,7 +17,7 @@ exports.handler = function(context, event, callback) {
 	                 "name": "ask_questions",
 	                 "questions": questions,
 	                 "on_complete": {
-	                     "redirect": "task://evaluate-answers3"
+	                     "redirect": "https://assessment-center-api-4281-dev.twil.io/triage3"
 	                 }
 	             }
 	         }]

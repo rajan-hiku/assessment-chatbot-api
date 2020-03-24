@@ -112,6 +112,70 @@ export default [
       format: 'cjs'
     },
     plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/greetings.js',
+    output: {
+      file: 'functions/greetings.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/collectfallback.js',
+    output: {
+      file: 'functions/collectfallback.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/fallback.js',
+    output: {
+      file: 'functions/fallback.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/goodbye.js',
+    output: {
+      file: 'functions/goodbye.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/getHospitalPostalCode.js',
+    output: {
+      file: 'functions/getHospitalPostalCode.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/getPostalCode.js',
+    output: {
+      file: 'functions/getPostalCode.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/nearestHosp.js',
+    output: {
+      file: 'functions/nearestHosp.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
+  },
+  {
+    input: 'twilioFunctions/nearestCent.js',
+    output: {
+      file: 'functions/nearestCent.js',
+      format: 'cjs'
+    },
+    plugins: [resolve()]
   }
  
 ]

@@ -5,7 +5,7 @@ exports.handler = async (context, event, callback) => {
   let message = {}
   const memory = JSON.parse(event.Memory)
 
-  const Breathing = memory.twilio.collected_data.ask_questions.answers.Breathing.answer || 'No'
+  const Breathing = memory.twilio.collected_data.ask_questions.answers.Breathing.answer
 
   if (Breathing === 'Yes') {
     // Evaluate-Answers
@@ -18,10 +18,10 @@ exports.handler = async (context, event, callback) => {
               say: message
             },
             {
-              redirect: 'task://getHospitalPostalCode'
+              redirect: 'https://assessment-center-api-4281-dev.twil.io/getHospitalPostalCode'
             },
             {
-              listen: false
+              listen: true
             }
           ]
         }
@@ -31,10 +31,10 @@ exports.handler = async (context, event, callback) => {
     responseObject = {
       actions: [
         {
-          redirect: 'task://Questions2'
+          redirect: 'https://assessment-center-api-4281-dev.twil.io/Questions2'
         },
         {
-          listen: false
+          listen: true
         }
       ]
     }
