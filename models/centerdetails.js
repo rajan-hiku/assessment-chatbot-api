@@ -10,9 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     PID: DataTypes.STRING,
     lat: DataTypes.FLOAT,
     lng: DataTypes.FLOAT
-  }, {})
-  CenterDetails.associate = function (models) {
-    // associations can be defined here
-  }
+  }, {
+    tableName: 'CenterDetails'
+  })
   return CenterDetails
 }
