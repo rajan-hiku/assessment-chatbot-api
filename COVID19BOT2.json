@@ -121,7 +121,7 @@
             "actions": {
                 "actions": [
                     {
-                        "redirect": "https://wenge-chihuahua-7603.twil.io/getPostalCode"
+                        "redirect": "https://assessment-center-api-4281-dev.twil.io/getPostalCode"
                     }
                 ]
             },
