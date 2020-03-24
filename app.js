@@ -179,6 +179,39 @@ router.post('/triage4', async (req, res) => {
   handler(null, event, callback);
 })
 
+router.get('/Questions2', async (req, res) => {
+  const event = {
+  }
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond)
+  }
+  const { handler } = require('./twilioFunctions/Questions2')
+  handler(null, event, callback)
+})
+
+router.get('/Questions3', async (req, res) => {
+  const event = {
+  }
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond)
+  }
+  const { handler } = require('./twilioFunctions/Questions3')
+  handler(null, event, callback)
+})
+
+router.get('/Questions4', async (req, res) => {
+  const event = {
+  }
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond)
+  }
+  const { handler } = require('./twilioFunctions/Questions4')
+  handler(null, event, callback)
+})
+
 app.use('/', router)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
