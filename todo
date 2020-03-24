@@ -1,11 +1,10 @@
-[] Triage2Dev[Ganesh] -> not used
 LanguageSelection [Ganesh]
 safety-tips [Ganesh]
 LanguageSelection [Ganesh]
-Traige1-Dev	[Ganesh] -> done by adi
-getPostalCode	[Ganesh]
 getCenterDetails	[Ganesh]
 RetrieveAssesmentCenters [Ganesh]
+self-isolation [Ganesh]
+newsupdate [Ganesh]
 Triage4 [Heaten]
 Questions4 [Heaten]
 Triage3 [Heaten]
@@ -13,16 +12,8 @@ Questions3 [Heaten]
 Triage2	[Heaten]
 Questions2	[Heaten]
 
-Triage1	[Adi] -> done
-Questions1	[Adi] -> done
-Triage	[Adi] -> not used
-Questions [Adi] -> not used
-JSON Response [Adi] -> not used
-getPostalCode [Adi]
 
 New 
-self-isolation
-newsupdate
 evaluate-answers4
 evaluate-answers3
 evaluate-answers2
