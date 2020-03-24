@@ -56,7 +56,7 @@ export default [
       format: 'cjs'
     },
     plugins: [resolve()]
-  }
+  },
   {
     input: 'twilioFunctions/Questions3.js',
     output: {
@@ -64,7 +64,7 @@ export default [
       format: 'cjs'
     },
     plugins: [resolve()]
-  }
+  },
   {
     input: 'twilioFunctions/Questions4.js',
     output: {
