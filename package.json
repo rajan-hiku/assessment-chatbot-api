@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "build": "rollup -c",
-    "deploy": "npm run build && twilio-run deploy && ta update --schema COVID19BOT1.json",
+    "deploy": "npm run build && twilio-run deploy && ta update --schema COVID19BOT2.json",
     "lint": "eslint **.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
