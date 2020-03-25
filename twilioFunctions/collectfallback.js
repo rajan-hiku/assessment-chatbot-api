@@ -15,7 +15,4 @@ exports.handler = async function (context, event, callback) {
     ]
   }
   callback(null, responseObject)
-  // }, function done (err) {
-  // if (err) { console.error(err) }
-  // })
 }
