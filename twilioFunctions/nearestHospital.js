@@ -1,4 +1,4 @@
-const { getTop3Centers, defaultHospitalCodeTxt } = require('../lib')
+const { getTop3Centers, defaultHospitalCodeTxt, getTextForFunction } = require('../lib')
 const { hospitalTable } = require('../constants')
 
 const nearestCenter = async (context, event, callback) => {
@@ -8,8 +8,9 @@ const nearestCenter = async (context, event, callback) => {
     memory.twilio.collected_data.ask_questions.answers.HPostalCode.answer
 
   const top3 = await getTop3Centers(hospitalTable, postalCode)
-  const result = defaultHospitalCodeTxt(
-    'The 3 closest hospitals center to you are:',
+  const startTxt = await getTextForFunction('getHospitalPostalCode')
+  const result = await defaultHospitalCodeTxt(
+    startTxt,
     top3
   )
 
