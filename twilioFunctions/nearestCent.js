@@ -18,7 +18,7 @@ const nearestCenter = async (context, event, callback) => {
         say: result
       },
       {
-        redirect: 'https://assessment-center-api-4281-dev.twil.io/informationRoute'
+        redirect: `${process.env.ASSESMENT_API}/informationRoute`
       },
       {
         listen: false

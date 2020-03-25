@@ -1,14 +1,13 @@
 const { airTableBase, messagesTable } = require('../constants')
 
-exports.handler = function(context, event, callback) {
-	let responseObject = {};
-	let message = {};
-	let memory = JSON.parse(event.Memory);
-	
-	let Breathing = memory.twilio.collected_data.ask_questions.answers.Breathing.answer;
+exports.handler = function (context, event, callback) {
+  let responseObject = {}
+  let message = {}
+  const memory = JSON.parse(event.Memory)
 
-	
-	if ( Breathing == 'Yes' ){
+  const Breathing = memory.twilio.collected_data.ask_questions.answers.Breathing.answer
+
+  if (Breathing === 'Yes') {
 	    airTableBase(messagesTable)
       		.select({ filterByFormula: 'AND(SEARCH("Evaluate-Answers", Name),SEARCH("Both",BotType))' }).eachPage(function page (records, fetchNextPage) {
         message = records[0].fields.Message
@@ -18,7 +17,7 @@ exports.handler = function(context, event, callback) {
               say: message
             },
             {
-              redirect: 'https://assessment-center-api-4281-dev.twil.io/getHospitalPostalCode'
+              redirect: `${process.env.ASSESMENT_API}/getHospitalPostalCode`
             },
             {
               listen: true
@@ -27,19 +26,17 @@ exports.handler = function(context, event, callback) {
         }
         callback(null, responseObject)
       })
-	}else {
+  } else {
 	   	responseObject = {
-	    "actions": [
-				{
-				"redirect": "https://assessment-center-api-4281-dev.twil.io/Questions3"
-				},
-				{
-					"listen": false
-				}
+	    actions: [
+        {
+          redirect: `${process.env.ASSESMENT_API}/Questions3`
+        },
+        {
+          listen: false
+        }
 	   		]
-		};
-		callback(null,responseObject);
-	}
-	
-
-};
+    }
+    callback(null, responseObject)
+  }
+}

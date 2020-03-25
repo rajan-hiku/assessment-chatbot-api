@@ -14,10 +14,10 @@ const fn_newsupdate = function (context, event, callback) {
             say: message
           },
           {
-              "redirect": "https://assessment-center-api-4281-dev.twil.io/informationRoute"
+            redirect: `${process.env.ASSESMENT_API}/informationRoute`
           },
           {
-              "listen": false
+            listen: false
           }
         ]
       }
