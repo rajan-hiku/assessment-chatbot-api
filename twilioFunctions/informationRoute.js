@@ -1,40 +1,32 @@
-const { airTableBase, messagesTable } = require('../constants')
+const { getTextForFunction } = require('../lib/index')
 
-const informationRouter = function (context, event, callback) {
-  let message = ''
-  airTableBase(messagesTable)
-    .select({ filterByFormula: 'AND(SEARCH("Information_Router", Name),SEARCH("SMS",BotType))' })
-    .eachPage(function page (records, fetchNextPage) {
-      // This function (`page`) will get called for each page of records.
-      console.log(records[0].fields)
-      message = records[0].fields.Message
-      const responseObject = {
-        actions: [
-          {
-            say: message
-          },
-          {
-            listen: {
-              voice_digits: {
-                redirects: {
-                  0: 'task://LanguageSelection',
-                  1: 'task://newsupdate',
-                  2: 'task://questions',
-                  3: 'task://self-isolation',
-                  4: 'task://safety-tips',
-                  5: 'task://goodbye'
-                },
-                finish_on_key: '#',
-                num_digits: 1
-              }
-            }
+exports.handler = async function (context, event, callback) {
+  const message = await getTextForFunction('Information_Router', 'SMS')
+
+  const responseObject = {
+    actions: [
+      {
+        say: message
+      },
+      {
+        listen: {
+          voice_digits: {
+            redirects: {
+              0: 'task://LanguageSelection',
+              1: 'task://newsupdate',
+              2: 'task://questions',
+              3: 'task://self-isolation',
+              4: 'task://safety-tips',
+              5: 'task://goodbye'
+            },
+            finish_on_key: '#',
+            num_digits: 1
           }
-        ]
+        }
       }
-      callback(null, responseObject)
-    }, function done (err) {
-      if (err) { console.error(err) }
-    })
+    ]
+  }
+  callback(null, responseObject)
 
   // Current PRod
   // [
@@ -58,5 +50,3 @@ const informationRouter = function (context, event, callback) {
   //   }
   // ]
 }
-
-exports.handler = informationRouter
