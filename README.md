@@ -78,7 +78,11 @@ OCD_API_KEY=Opencage key
 CRON_PASS=any random letter, this will update airtable with lat,lng
 ACCOUNT_SID=twilio SID 
 AUTH_TOKEN=twilio Auth Token
-
+MYSQL_USERNAME=
+MYSQL_PASS=
+MYSQL_DATABASE=
+MYSQL_HOST=
+MYSQL_PORT=
 
 ### DB migrate
 install this https://github.com/sequelize/cli#installation
