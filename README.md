@@ -102,14 +102,13 @@ use .env to set ur admin username and password for mysql
 2 Ways to migrate and seed:
 
 1. npm scripts:
-`npm run seed`
+  run `npm run seed`
 
 2. Manual (using sequelize-cli)
-run `npx sequelize db:migrate`
+  run `npx sequelize db:migrate`
 
-run `npx sequelize db:seed:all`
+  run `npx sequelize db:seed:all`
 
-run `npx sequelize-cli model:generate --name HospitalDetails --attributes HospitalName:string,StreetAddress:string,City:string,Province:string,PostalCode:string,PhoneNumber:string,PID:string,lat:float,lng:float`
+  run `npx sequelize-cli model:generate --name HospitalDetails --attributes HospitalName:string,StreetAddress:string,City:string,Province:string,PostalCode:string,PhoneNumber:string,PID:string,lat:float,lng:float`
 
-
- run `npx sequelize db:migrate`
+  run `npx sequelize db:migrate`
