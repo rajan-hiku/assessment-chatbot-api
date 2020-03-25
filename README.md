@@ -74,21 +74,34 @@ Account SID and Auth Token are here
 ### .env
 make sure ur .env looks like this
 AIRTABLE=AIRTABLE_KEY
+
 OCD_API_KEY=Opencage key
-CRON_PASS=any random letter, this will update airtable with lat,lng
+
+CRON_PASS=any random letter, this will unlock airtable 
+with lat,lng
+
 ACCOUNT_SID=twilio SID 
+
 AUTH_TOKEN=twilio Auth Token
+
 MYSQL_USERNAME=
+
 MYSQL_PASS=
+
 MYSQL_DATABASE=
+
 MYSQL_HOST=
+
 MYSQL_PORT=
 
 ### DB migrate
 install this https://github.com/sequelize/cli#installation
 use .env to set ur admin username and password for mysql
 run `npx sequelize db:migrate`
-run `npx sequelize db:seed:all`
-npx sequelize-cli model:generate --name HospitalDetails --attributes HospitalName:string,StreetAddress:string,City:string,Province:string,PostalCode:string,PhoneNumber:string,PID:string,lat:float,lng:float
 
- npx sequelize db:migrate
+run `npx sequelize db:seed:all`
+
+run `npx sequelize-cli model:generate --name HospitalDetails --attributes HospitalName:string,StreetAddress:string,City:string,Province:string,PostalCode:string,PhoneNumber:string,PID:string,lat:float,lng:float`
+
+
+ run `npx sequelize db:migrate`
