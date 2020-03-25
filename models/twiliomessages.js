@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const TwilioMessages = sequelize.define('TwilioMessages', {
     Name: DataTypes.STRING,
-    Message: DataTypes.STRING('long'),
+    Message: DataTypes.TEXT('long'),
     BotType: DataTypes.STRING,
     Language: DataTypes.STRING
   }, {});

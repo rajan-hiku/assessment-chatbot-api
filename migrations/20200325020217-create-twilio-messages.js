@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       Message: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT('long')
       },
       BotType: {
         type: Sequelize.STRING
