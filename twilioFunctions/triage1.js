@@ -18,7 +18,7 @@ exports.handler = async (context, event, callback) => {
               say: message
             },
             {
-              redirect: 'https://assessment-center-api-4281-dev.twil.io/getHospitalPostalCode'
+              redirect: `${process.env.ASSESMENT_API}/getHospitalPostalCode`
             },
             {
               listen: true
@@ -31,7 +31,7 @@ exports.handler = async (context, event, callback) => {
     responseObject = {
       actions: [
         {
-          redirect: 'https://assessment-center-api-4281-dev.twil.io/Questions2'
+          redirect: `${process.env.ASSESMENT_API}/Questions2`
         },
         {
           listen: true

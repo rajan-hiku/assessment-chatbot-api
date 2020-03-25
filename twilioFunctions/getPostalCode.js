@@ -18,7 +18,7 @@ exports.handler = function (context, event, callback) {
               name: 'ask_questions',
               questions: questions,
               on_complete: {
-                redirect: 'https://assessment-center-api-4281-dev.twil.io/nearestCent'
+                redirect: `${process.env.ASSESMENT_API}/nearestCent`
               }
             }
           }]
