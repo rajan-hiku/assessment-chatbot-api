@@ -96,12 +96,19 @@ MYSQL_PORT=
 
 ### DB migrate
 install this https://github.com/sequelize/cli#installation
+
 use .env to set ur admin username and password for mysql
-run `npx sequelize db:migrate`
 
-run `npx sequelize db:seed:all`
+There are two ways to migrate and seed:
 
+1. npm scripts:
+    * run `npm run seed`
+
+2. Manual (using sequelize-cli)
+    1. run `npx sequelize db:migrate`
+
+    2. run `npx sequelize db:seed:all`
+
+
+To generate Models/Seeders follow this example:
 run `npx sequelize-cli model:generate --name HospitalDetails --attributes HospitalName:string,StreetAddress:string,City:string,Province:string,PostalCode:string,PhoneNumber:string,PID:string,lat:float,lng:float`
-
-
- run `npx sequelize db:migrate`
