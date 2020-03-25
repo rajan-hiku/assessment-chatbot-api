@@ -1,31 +1,29 @@
-const { airTableBase, messagesTable } = require('../constants')
+const { getTextForFunction } = require('../lib/index')
 
-exports.handler = function (context, event, callback) {
-  airTableBase(messagesTable)
-    .select({ filterByFormula: 'AND(SEARCH("Questions3", Name),SEARCH("Both",BotType))' }).eachPage(function page (records, fetchNextPage) {
-      const message = records[0].fields.Message
-      const questions = [
-        {
-          question: {
-            say: message
+exports.handler = async function (context, event, callback) {
+  const message = await getTextForFunction('Questions3')
 
-          },
-          name: 'Breathing',
-          type: 'Twilio.YES_NO'
+  const questions = [
+    {
+      question: {
+        say: message
+
+      },
+      name: 'Breathing',
+      type: 'Twilio.YES_NO'
+    }
+  ]
+  const responseObject = {
+    actions: [
+      {
+        collect: {
+          name: 'ask_questions',
+          questions: questions,
+          on_complete: {
+            redirect: `${process.env.ASSESMENT_API}/triage3`
+          }
         }
-      ]
-      const responseObject = {
-        actions: [
-          {
-            collect: {
-              name: 'ask_questions',
-              questions: questions,
-              on_complete: {
-                redirect: `${process.env.ASSESMENT_API}/triage3`
-              }
-            }
-          }]
-      }
-      callback(null, responseObject)
-    })
+      }]
+  }
+  callback(null, responseObject)
 }

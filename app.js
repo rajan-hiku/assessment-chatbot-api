@@ -261,6 +261,17 @@ router.get('/getPostalCode', async (req, res) => {
   handler(null, event, callback)
 })
 
+router.get('/collectfallback', async (req, res) => {
+  const event = {
+  }
+  const callback = (err, respond) => {
+    if (err) res.send(err)
+    res.send(respond)
+  }
+  const { handler } = require('./twilioFunctions/collectfallback')
+  handler(null, event, callback)
+})
+
 app.use('/', router)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
