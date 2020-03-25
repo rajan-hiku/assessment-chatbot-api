@@ -5,8 +5,8 @@
   "scripts": {
     "start": "nodemon app.js",
     "build": "rollup -c",
-    "deploy": "npm run build && twilio-run deploy && twilio autopilot:update -s APIBot.json ",
-    "deploy:prod": "npm run build && twilio-run deploy --environment=prod && twilio autopilot:update -s MediGenieSMS.json && twilio autopilot:update -s MediGenieVoice.json",
+    "deploy": "npm run build && twilio-run deploy && ta update --schema APIBot.json ",
+    "deploy:prod": "npm run build && twilio-run deploy --environment=prod  --env=prod.env && ta update --schema MediGenieSMS.json && ta update --schema MediGenieVoice.json",
     "lint": "eslint **.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,8 +26,6 @@
     "twilio-run": "^2.0.0",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@twilio/autopilot-cli": "^0.0.27",
-    "@twilio-labs/plugin-serverless": "^1.4.0s",
-    "@dabblelab/plugin-autopilot": "^1.0.2",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.1",

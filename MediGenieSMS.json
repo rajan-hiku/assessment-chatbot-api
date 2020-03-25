@@ -1,628 +1,646 @@
 {
-    "friendlyName" : "",
-    "logQueries" : true,
-    "uniqueName" : "MediGenieSMS",
-    "defaults" : {
-        "defaults" : {
-            "assistant_initiation" : "task://greeting",
-            "fallback" : "task://fallback",
-            "collect" : {
-                "validate_on_failure" : "task://collect_fallback"
+    "friendlyName": "",
+    "logQueries": true,
+    "uniqueName": "MediGenieSMS",
+    "defaults": {
+        "defaults": {
+            "assistant_initiation": "task://greeting",
+            "fallback": "task://fallback",
+            "collect": {
+                "validate_on_failure": "task://collect_fallback"
             }
         }
     },
-    "styleSheet" : {
-        "style_sheet" : {
-            "collect" : {
-                "validate" : {
-                    "on_failure" : {
-                        "repeat_question" : false,
-                        "messages" : [
+    "styleSheet": {
+        "style_sheet": {
+            "collect": {
+                "validate": {
+                    "on_failure": {
+                        "repeat_question": false,
+                        "messages": [
                             {
-                                "say" : {
-                                    "speech" : "I didn't get that. What did you say?"
+                                "say": {
+                                    "speech": "I didn't get that. What did you say?"
                                 }
                             },
                             {
-                                "say" : {
-                                    "speech" : "I still didn't catch that. Please repeat."
+                                "say": {
+                                    "speech": "I still didn't catch that. Please repeat."
                                 }
                             },
                             {
-                                "say" : {
-                                    "speech" : "Let's try one last time. Say it again please."
+                                "say": {
+                                    "speech": "Let's try one last time. Say it again please."
                                 }
                             }
                         ]
                     },
-                    "on_success" : { "say" : { "speech" : "" } },
-                    "max_attempts" : 4
+                    "on_success": {
+                        "say": {
+                            "speech": ""
+                        }
+                    },
+                    "max_attempts": 4
                 }
             },
-            "voice" : {
-                "say_voice" : "Polly.Matthew"
+            "voice": {
+                "say_voice": "Polly.Matthew"
             },
-            "name" : ""
+            "name": ""
         }
     },
-    "fieldTypes" : [],
-    "tasks" : [
+    "fieldTypes": [],
+    "tasks": [
         {
-            "uniqueName" : "nearestHospital",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "nearestHospital",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://assessment-center-api-4281-dev.twil.io/nearestHospital"
+                        "redirect": "https://assessment-center-api-4281-prod.twil.io/nearestHospital"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "getHospitalPostalCode",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "getHospitalPostalCode",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/getHospitalPostalCode"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/getHospitalPostalCode"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "getCenterDetails",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "getCenterDetails",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/getCenterDetails"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/getCenterDetails"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "getPostalCode",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "getPostalCode",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/getPostalCode"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/getPostalCode"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "evaluate-answers4",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "evaluate-answers4",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/Triage4"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/Triage4"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "Questions4",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "Questions4",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/Questions4"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/Questions4"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "evaluate-answers3",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "evaluate-answers3",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/Triage3"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/Triage3"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "Questions3",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "Questions3",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/Questions3"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/Questions3"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "evaluate-answers2",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "evaluate-answers2",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/Triage2"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/Triage2"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "Questions2",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "Questions2",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/Questions2"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/Questions2"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "evaluate-answers",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "evaluate-answers",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/Triage1"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/Triage1"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "questions",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "questions",
+            "actions": {
+                "actions": [
                     {
-                        "redirect" : "https://wenge-chihuahua-7603.twil.io/Questions1"
+                        "redirect": "https://wenge-chihuahua-7603.twil.io/Questions1"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : [
+            "fields": [],
+            "samples": [
                 {
-                    "language" : "en-US",
-                    "taggedText" : "2"
+                    "language": "en-US",
+                    "taggedText": "2"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "2"
+                    "language": "en-US",
+                    "taggedText": "2"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "2"
+                    "language": "en-US",
+                    "taggedText": "2"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "2"
+                    "language": "en-US",
+                    "taggedText": "2"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "2"
+                    "language": "en-US",
+                    "taggedText": "2"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "2"
+                    "language": "en-US",
+                    "taggedText": "2"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "2"
+                    "language": "en-US",
+                    "taggedText": "2"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "2"
+                    "language": "en-US",
+                    "taggedText": "2"
                 }
             ]
         },
         {
-            "uniqueName" : "test",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "test",
+            "actions": {
+                "actions": [
                     {
-                        "say" : "This is your new Task"
+                        "say": "This is your new Task"
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "symptoms",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "symptoms",
+            "actions": {
+                "actions": [
                     {
-                        "say" : "Fever   greater   than   38°C   or   100.4°F.   Continuous   Cough.   and   Shortness   of   breath."
+                        "say": "Fever   greater   than   38°C   or   100.4°F.   Continuous   Cough.   and   Shortness   of   breath."
                     },
                     {
-                        "redirect" : "task://information_router"
+                        "redirect": "task://information_router"
                     },
-                    { "listen" : false }
+                    {
+                        "listen": false
+                    }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "newsupdate",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "newsupdate",
+            "actions": {
+                "actions": [
                     {
-                        "say" : "As  of  March  25  7:30 AM,  588 confirmed cases  in Ontario, 617  cases  in  BC, 358  cases in  Alberta, 221  Cases  in  Quebec and  1959 confirmed cases  in  Canada"
+                        "say": "As  of  March  25  7:30 AM,  588 confirmed cases  in Ontario, 617  cases  in  BC, 358  cases in  Alberta, 221  Cases  in  Quebec and  1959 confirmed cases  in  Canada"
                     },
                     {
-                        "redirect" : "task://information_router"
+                        "redirect": "task://information_router"
                     },
-                    { "listen" : false }
+                    {
+                        "listen": false
+                    }
                 ]
             },
-            "fields" : [],
-            "samples" : [
+            "fields": [],
+            "samples": [
                 {
-                    "language" : "en-US",
-                    "taggedText" : "1"
+                    "language": "en-US",
+                    "taggedText": "1"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "1"
+                    "language": "en-US",
+                    "taggedText": "1"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "1"
+                    "language": "en-US",
+                    "taggedText": "1"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "1"
+                    "language": "en-US",
+                    "taggedText": "1"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "1"
+                    "language": "en-US",
+                    "taggedText": "1"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "1"
+                    "language": "en-US",
+                    "taggedText": "1"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "1"
+                    "language": "en-US",
+                    "taggedText": "1"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "1"
+                    "language": "en-US",
+                    "taggedText": "1"
                 }
             ]
         },
         {
-            "uniqueName" : "self-isolation",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "self-isolation",
+            "actions": {
+                "actions": [
                     {
-                        "say" : "You   must   self-isolate. \r If   you   have   travelled   internationally   within   the   last   14   days. \r If   you   have   any   COVID-19   symptoms.   \r If you had   close   contact   with   a    COVID-19   confirmed   case. \r Please   do   not   go   to   an   emergency   department,   family   doctor   or   walk-in   clinic  unless  your   symptoms   worsen.   \r Don't   go   to   any   public   places,   stay   at   home,   and   don’t   have   any   visitors"
+                        "say": "You   must   self-isolate. \r If   you   have   travelled   internationally   within   the   last   14   days. \r If   you   have   any   COVID-19   symptoms.   \r If you had   close   contact   with   a    COVID-19   confirmed   case. \r Please   do   not   go   to   an   emergency   department,   family   doctor   or   walk-in   clinic  unless  your   symptoms   worsen.   \r Don't   go   to   any   public   places,   stay   at   home,   and   don’t   have   any   visitors"
                     },
                     {
-                        "redirect" : "task://information_router"
+                        "redirect": "task://information_router"
                     },
-                    { "listen" : false }
+                    {
+                        "listen": false
+                    }
                 ]
             },
-            "fields" : [],
-            "samples" : [
+            "fields": [],
+            "samples": [
                 {
-                    "language" : "en-US",
-                    "taggedText" : "3"
+                    "language": "en-US",
+                    "taggedText": "3"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "3"
+                    "language": "en-US",
+                    "taggedText": "3"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "3"
+                    "language": "en-US",
+                    "taggedText": "3"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "3"
+                    "language": "en-US",
+                    "taggedText": "3"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "3"
+                    "language": "en-US",
+                    "taggedText": "3"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "3"
+                    "language": "en-US",
+                    "taggedText": "3"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "3"
+                    "language": "en-US",
+                    "taggedText": "3"
                 }
             ]
         },
         {
-            "uniqueName" : "safety-tips",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "safety-tips",
+            "actions": {
+                "actions": [
                     {
-                        "say" : "Wash hands at the door and at regular intervals. \r Change Clothing when entering home from public space. \r Wash Coats every 1-2 Days. \r Avoid touching face, cover coughs & sneezes. \r Disinfect surfaces and utensils daily. \r Increase ventilation by opening windows or adjusting AC.\r Provide a protected space for vulnerable household members. \r Limit Non-essential travel even domestic. \r Limit eating in public spaces \r"
+                        "say": "Wash hands at the door and at regular intervals. \r Change Clothing when entering home from public space. \r Wash Coats every 1-2 Days. \r Avoid touching face, cover coughs & sneezes. \r Disinfect surfaces and utensils daily. \r Increase ventilation by opening windows or adjusting AC.\r Provide a protected space for vulnerable household members. \r Limit Non-essential travel even domestic. \r Limit eating in public spaces \r"
                     },
                     {
-                        "redirect" : "task://information_router"
+                        "redirect": "task://information_router"
                     },
-                    { "listen" : false }
+                    {
+                        "listen": false
+                    }
                 ]
             },
-            "fields" : [],
-            "samples" : [
+            "fields": [],
+            "samples": [
                 {
-                    "language" : "en-US",
-                    "taggedText" : "4"
+                    "language": "en-US",
+                    "taggedText": "4"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "4"
+                    "language": "en-US",
+                    "taggedText": "4"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "4"
+                    "language": "en-US",
+                    "taggedText": "4"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "4"
+                    "language": "en-US",
+                    "taggedText": "4"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "4"
+                    "language": "en-US",
+                    "taggedText": "4"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "4"
+                    "language": "en-US",
+                    "taggedText": "4"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "4"
+                    "language": "en-US",
+                    "taggedText": "4"
                 }
             ]
         },
         {
-            "uniqueName" : "information_router",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "information_router",
+            "actions": {
+                "actions": [
                     {
-                        "say" : "\r For COVID-19 News Update Text 1.\r For COVID-19 Triage Text 2.\r For COVID-19 Self-isolation Text 3.\r For COVID-19 Prevention Tips Text 4.\r For Exit Text 5."
+                        "say": "\r For COVID-19 News Update Text 1.\r For COVID-19 Triage Text 2.\r For COVID-19 Self-isolation Text 3.\r For COVID-19 Prevention Tips Text 4.\r For Exit Text 5."
                     },
                     {
-                        "listen" : {
-                            "voice_digits" : {
-                                "redirects" : {
-                                    "1" : "task://newsupdate",
-                                    "2" : "task://questions",
-                                    "3" : "task://self-isolation",
-                                    "4" : "task://safety-tips",
-                                    "5" : "task://goodbye"
+                        "listen": {
+                            "voice_digits": {
+                                "redirects": {
+                                    "1": "task://newsupdate",
+                                    "2": "task://questions",
+                                    "3": "task://self-isolation",
+                                    "4": "task://safety-tips",
+                                    "5": "task://goodbye"
                                 },
-                                "finish_on_key" : "#",
-                                "num_digits" : 1
+                                "finish_on_key": "#",
+                                "num_digits": 1
                             }
                         }
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "collect_fallback",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "collect_fallback",
+            "actions": {
+                "actions": [
                     {
-                        "say" : "Looks like I'm having trouble. Apologies for that. Let's start again, how can I help you today?"
-                    },
-                    { "listen" : true }
-                ]
-            },
-            "fields" : [],
-            "samples" : []
-        },
-        {
-            "uniqueName" : "fallback",
-            "actions" : {
-                "actions" : [
-                    {
-                        "say" : "I'm sorry didn't quite get that. Please say that again."
+                        "say": "Looks like I'm having trouble. Apologies for that. Let's start again, how can I help you today?"
                     },
                     {
-                        "redirect" : "task://information_router"
+                        "listen": true
                     }
                 ]
             },
-            "fields" : [],
-            "samples" : []
+            "fields": [],
+            "samples": []
         },
         {
-            "uniqueName" : "greeting",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "fallback",
+            "actions": {
+                "actions": [
                     {
-                        "say" : "Hello You have reached COVID-19 Information and self triage help line"
+                        "say": "I'm sorry didn't quite get that. Please say that again."
                     },
                     {
-                        "redirect" : "task://information_router"
-                    },
-                    { "listen" : false }
+                        "redirect": "task://information_router"
+                    }
                 ]
             },
-            "fields" : [],
-            "samples" : [
+            "fields": [],
+            "samples": []
+        },
+        {
+            "uniqueName": "greeting",
+            "actions": {
+                "actions": [
+                    {
+                        "say": "Hello You have reached COVID-19 Information and self triage help line"
+                    },
+                    {
+                        "redirect": "task://information_router"
+                    },
+                    {
+                        "listen": false
+                    }
+                ]
+            },
+            "fields": [],
+            "samples": [
                 {
-                    "language" : "en-US",
-                    "taggedText" : "what do you do"
+                    "language": "en-US",
+                    "taggedText": "what do you do"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "what can you do"
+                    "language": "en-US",
+                    "taggedText": "what can you do"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "sup"
+                    "language": "en-US",
+                    "taggedText": "sup"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "whatsup"
+                    "language": "en-US",
+                    "taggedText": "whatsup"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "yo"
+                    "language": "en-US",
+                    "taggedText": "yo"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "hey"
+                    "language": "en-US",
+                    "taggedText": "hey"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "what'us up"
+                    "language": "en-US",
+                    "taggedText": "what'us up"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "good afternoon"
+                    "language": "en-US",
+                    "taggedText": "good afternoon"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "Hello."
+                    "language": "en-US",
+                    "taggedText": "Hello."
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "hi!"
+                    "language": "en-US",
+                    "taggedText": "hi!"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "good morning"
+                    "language": "en-US",
+                    "taggedText": "good morning"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "hi there."
+                    "language": "en-US",
+                    "taggedText": "hi there."
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "hi there"
+                    "language": "en-US",
+                    "taggedText": "hi there"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "heya"
+                    "language": "en-US",
+                    "taggedText": "heya"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "hello"
+                    "language": "en-US",
+                    "taggedText": "hello"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "Hi"
+                    "language": "en-US",
+                    "taggedText": "Hi"
                 }
             ]
         },
         {
-            "uniqueName" : "goodbye",
-            "actions" : {
-                "actions" : [
+            "uniqueName": "goodbye",
+            "actions": {
+                "actions": [
                     {
-                        "say" : "Thank you! Please reach out again if you need anything. Goodbye."
+                        "say": "Thank you! Please reach out again if you need anything. Goodbye."
                     },
-                    { "listen" : false }
+                    {
+                        "listen": false
+                    }
                 ]
             },
-            "fields" : [],
-            "samples" : [
+            "fields": [],
+            "samples": [
                 {
-                    "language" : "en-US",
-                    "taggedText" : "5"
+                    "language": "en-US",
+                    "taggedText": "5"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "5"
+                    "language": "en-US",
+                    "taggedText": "5"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "5"
+                    "language": "en-US",
+                    "taggedText": "5"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "stop"
+                    "language": "en-US",
+                    "taggedText": "stop"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "that's all"
+                    "language": "en-US",
+                    "taggedText": "that's all"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "stop talking"
+                    "language": "en-US",
+                    "taggedText": "stop talking"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "see ya"
+                    "language": "en-US",
+                    "taggedText": "see ya"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "bye bye"
+                    "language": "en-US",
+                    "taggedText": "bye bye"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "good bye"
+                    "language": "en-US",
+                    "taggedText": "good bye"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "no thanks"
+                    "language": "en-US",
+                    "taggedText": "no thanks"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "no thanks"
+                    "language": "en-US",
+                    "taggedText": "no thanks"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "go away"
+                    "language": "en-US",
+                    "taggedText": "go away"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "cancel"
+                    "language": "en-US",
+                    "taggedText": "cancel"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "goodnight"
+                    "language": "en-US",
+                    "taggedText": "goodnight"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "no"
+                    "language": "en-US",
+                    "taggedText": "no"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "goodbye"
+                    "language": "en-US",
+                    "taggedText": "goodbye"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "that is all thank you"
+                    "language": "en-US",
+                    "taggedText": "that is all thank you"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "that's all for today"
+                    "language": "en-US",
+                    "taggedText": "that's all for today"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "that would be all"
+                    "language": "en-US",
+                    "taggedText": "that would be all"
                 },
                 {
-                    "language" : "en-US",
-                    "taggedText" : "that would be all thanks"
+                    "language": "en-US",
+                    "taggedText": "that would be all thanks"
                 }
             ]
         }
     ],
-    "modelBuild" : {
-        "uniqueName" : "MediGenieSMS_25-3-2020_8.21.51am"
+    "modelBuild": {
+        "uniqueName": "MediGenieSMS_25-3-2020_8.21.51am"
     }
 }
