@@ -25,15 +25,15 @@ exports.handler = async function (context, event, callback) {
     }
     callback(null, responseObject)
   } else {
-	   	responseObject = {
-	    actions: [
+    responseObject = {
+      actions: [
         {
           redirect: `${process.env.ASSESMENT_API}/Questions3`
         },
         {
           listen: false
         }
-	   		]
+      ]
     }
     callback(null, responseObject)
   }

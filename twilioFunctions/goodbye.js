@@ -12,5 +12,3 @@ exports.handler = async function (context, event, callback) {
   }
   callback(null, responseObject)
 }
-
-exports.handler = fn_callfallback

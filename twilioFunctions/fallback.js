@@ -1,6 +1,6 @@
 const { getTextForFunction } = require('../lib/index')
 
-const fn_callfallback = async function (context, event, callback) {
+exports.handler = async function (context, event, callback) {
   const message = await getTextForFunction('Fallback', 'Both', 'English')
   const responseObject = {
     actions: [
@@ -17,5 +17,3 @@ const fn_callfallback = async function (context, event, callback) {
   }
   callback(null, responseObject)
 }
-
-exports.handler = fn_callfallback
