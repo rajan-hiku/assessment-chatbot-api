@@ -177,10 +177,5 @@ export default [
     },
     plugins: [resolve()]
   }
- 
+
 ]
-
-
-
-
-
