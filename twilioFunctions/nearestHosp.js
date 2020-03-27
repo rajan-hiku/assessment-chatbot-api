@@ -1,7 +1,7 @@
 const { getTop3Centers, defaultHospitalCodeTxt, getTextForFunction } = require('../lib')
 const { hospitalTable } = require('../constants')
 
-const nearestCenter = async (context, event, callback) => {
+exports.handler = async (context, event, callback) => {
   let responseObject = {}
   const memory = JSON.parse(event.Memory)
   const postalCode =
@@ -30,5 +30,3 @@ const nearestCenter = async (context, event, callback) => {
   }
   callback(null, responseObject)
 }
-
-exports.handler = nearestCenter
