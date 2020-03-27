@@ -16,7 +16,7 @@ const db = new Sequelize(process.env.MYSQL_DATABASE, process.env.MYSQL_USERNAME,
 const airTableBase = new Airtable({ apiKey: process.env.AIRTABLE }).base(
   'appZv8bkFustjCUXN'
 )
-const centerTableDB = db.define('HospitalDetails', {
+const hospitalTableDB = db.define('HospitalDetails', {
   HospitalName: Sequelize.DataTypes.STRING,
   StreetAddress: Sequelize.DataTypes.STRING,
   City: Sequelize.DataTypes.STRING,
@@ -28,7 +28,7 @@ const centerTableDB = db.define('HospitalDetails', {
   lng: Sequelize.DataTypes.FLOAT
 }, {})
 
-const hospitalTableDB = db.define('CenterDetails', {
+const centerTableDB = db.define('CenterDetails', {
   CenterName: Sequelize.DataTypes.STRING,
   StreetAddress: Sequelize.DataTypes.STRING,
   City: Sequelize.DataTypes.STRING,

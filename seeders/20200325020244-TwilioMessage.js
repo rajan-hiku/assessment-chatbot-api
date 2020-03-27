@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -26,7 +26,8 @@ module.exports = {
           (null, '911advise','If your symptoms significanly worsen call 911 or go to the nearest Emergency Department .','Both','English', NOW(), NOW()),
           (null, 'Information_Router',', , , For , , , COVID-19 , , , News , , , Update , , , Press , , , 1 , , , , For , , , COVID-19 , , , Triage , , , Press , , , 2 , , , , For , , , COVID-19 , , , Self-isolation , , , Press , , ,3 , , , , For , , , COVID-19 , , , Prevention , , , Tips , , , Press , , , 4 , , , For , , , exit , , , press , , , 5','Voice','English', NOW(), NOW()),
           (null, 'NewsUpdate','As , of ,March , 20 , 7:30 PM, 311 , confirmed ,  cases  , in  , Ontario ,  271,  cases,  in,   BC ,  195,  cases , in ,  Alberta , 139 ,  Cases , in ,  Quebec ,  and  , 971  , confirmed  , cases   in   Canada','Voice','English', NOW(), NOW()),
-          (null, 'getHospitalPostalCode','For the 3 closest hospital to you, enter the first 3 digits of your postal code (for example: A1A)','Both','English', NOW(), NOW());
+          (null, 'getHospitalPostalCode','For the 3 closest hospital to you, enter the first 3 digits of your postal code (for example: A1A)','Both','English', NOW(), NOW()),
+          (null, 'getHospitalDetails', 'The 3 closest hospital\\'s to you are', 'Both', 'English', 'NOW()', 'NOW()')
     `)
   },
 
@@ -39,4 +40,4 @@ module.exports = {
       return queryInterface.bulkDelete('People', null, {});
     */
   }
-};
+}

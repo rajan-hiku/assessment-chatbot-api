@@ -8,7 +8,7 @@ const nearestCenter = async (context, event, callback) => {
     memory.twilio.collected_data.ask_questions.answers.HPostalCode.answer
     // getHospitalPostalCode
   const top3 = await getTop3Centers(hospitalTable, postalCode)
-  const startTxt = await getTextForFunction('getHospitalPostalCode')
+  const startTxt = await getTextForFunction('getHospitalDetails')
 
   const result = await defaultHospitalCodeTxt(
     startTxt,
