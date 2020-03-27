@@ -1,7 +1,6 @@
 const hospitalTable = 'HospitalDetails'
 const centerTable = 'CenterDetails'
 const messagesTable = 'TwilioMessages'
-const Airtable = require('airtable')
 const Sequelize = require('sequelize')
 
 const db = new Sequelize(process.env.MYSQL_DATABASE, process.env.MYSQL_USERNAME, process.env.MYSQL_PASS, {
@@ -13,9 +12,6 @@ const db = new Sequelize(process.env.MYSQL_DATABASE, process.env.MYSQL_USERNAME,
   dialect: 'mysql'
 })
 
-const airTableBase = new Airtable({ apiKey: process.env.AIRTABLE }).base(
-  'appZv8bkFustjCUXN'
-)
 const hospitalTableDB = db.define('HospitalDetails', {
   HospitalName: Sequelize.DataTypes.STRING,
   StreetAddress: Sequelize.DataTypes.STRING,
@@ -50,7 +46,6 @@ const messageTableDB = db.define('TwilioMessages', {
 }, {})
 
 module.exports = {
-  airTableBase,
   centerTable,
   hospitalTable,
   db,
